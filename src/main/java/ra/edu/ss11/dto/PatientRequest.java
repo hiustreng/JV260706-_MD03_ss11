@@ -1,0 +1,19 @@
+package ra.edu.ss11.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PatientRequest {
+
+    @NotBlank(message = "Tên bệnh nhân không được để trống")
+    private String name;
+
+    @NotNull(message = "Tuổi không được để trống")
+    private Integer age;
+}
